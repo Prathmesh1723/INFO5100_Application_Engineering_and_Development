@@ -4,7 +4,7 @@
  */
 package UI;
 
-import Assignment1_model.Employee;
+import Assignment1_model.EmployeeData;
 import javafx.scene.control.SplitPane;
 import javax.swing.JPanel;
 
@@ -18,12 +18,12 @@ public class MainJrame extends javax.swing.JFrame {
      * Creates new form MainJrame
      */
     
-    Employee employeedata;
+    EmployeeData employeedata;
     
     
     public MainJrame() {
         initComponents();
-        employeedata = new Employee();
+        employeedata = new EmployeeData();
     }
 
     /**
@@ -67,6 +67,11 @@ public class MainJrame extends javax.swing.JFrame {
         });
 
         ReadEmployee.setText("Read");
+        ReadEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReadEmployeeActionPerformed(evt);
+            }
+        });
 
         SearchEmp.setText("Search");
 
@@ -78,9 +83,8 @@ public class MainJrame extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE)
                 .addGroup(ControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(SearchEmp, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                    .addGroup(ControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(ReadEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                        .addComponent(AddNewEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(ReadEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                    .addComponent(AddNewEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(22, 22, 22))
         );
         ControlPanelLayout.setVerticalGroup(
@@ -140,6 +144,12 @@ public class MainJrame extends javax.swing.JFrame {
         CreateEmpPanel createEmpPanel = new CreateEmpPanel(employeedata);
         LandingPanel.setRightComponent(createEmpPanel);
     }//GEN-LAST:event_AddNewEmployeeActionPerformed
+
+    private void ReadEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReadEmployeeActionPerformed
+        // TODO add your handling code here:
+        ReadEmpPanel readEmpPanel = new ReadEmpPanel(employeedata);
+        LandingPanel.setRightComponent(readEmpPanel);
+    }//GEN-LAST:event_ReadEmployeeActionPerformed
 
     /**
      * @param args the command line arguments

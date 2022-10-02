@@ -15,7 +15,7 @@ public class Employee {
     private String empEmail;
     private String empGender;
     private String empAge;
-    private int empStartDate;
+    private String empStartDate;
     private String empLevel;
     private String empTeamInfo;
     private String empPosition;
@@ -68,11 +68,11 @@ public class Employee {
         this.empAge = empAge;
     }
 
-    public int getEmpStartDate() {
+    public String getEmpStartDate() {
         return empStartDate;
     }
 
-    public void setEmpStartDate(int empStartDate) {
+    public void setEmpStartDate(String empStartDate) {
         this.empStartDate = empStartDate;
     }
 
@@ -98,6 +98,11 @@ public class Employee {
 
     public void setEmpPosition(String empPosition) {
         this.empPosition = empPosition;
+    }
+    
+    @Override 
+    public String toString(){
+       return empName;
     }
     
 }
