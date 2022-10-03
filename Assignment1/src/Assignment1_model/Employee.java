@@ -4,6 +4,10 @@
  */
 package Assignment1_model;
 
+import java.awt.Image;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author prath
@@ -19,6 +23,15 @@ public class Employee {
     private String empLevel;
     private String empTeamInfo;
     private String empPosition;
+    private ImageIcon empImage;
+
+    public ImageIcon getEmpImage() {
+        return empImage;
+    }
+
+    public void setEmpImage(ImageIcon empImage) {
+        this.empImage = empImage;
+    }
 
     public String getEmpName() {
         return empName;

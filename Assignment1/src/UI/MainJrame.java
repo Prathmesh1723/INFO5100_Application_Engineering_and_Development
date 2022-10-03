@@ -74,6 +74,11 @@ public class MainJrame extends javax.swing.JFrame {
         });
 
         SearchEmp.setText("Search");
+        SearchEmp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchEmpActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ControlPanelLayout = new javax.swing.GroupLayout(ControlPanel);
         ControlPanel.setLayout(ControlPanelLayout);
@@ -150,6 +155,14 @@ public class MainJrame extends javax.swing.JFrame {
         ReadEmpPanel readEmpPanel = new ReadEmpPanel(employeedata);
         LandingPanel.setRightComponent(readEmpPanel);
     }//GEN-LAST:event_ReadEmployeeActionPerformed
+
+    private void SearchEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchEmpActionPerformed
+        // TODO add your handling code here:
+         ReadEmpPanel searchPanel = new ReadEmpPanel(employeedata);
+         LandingPanel.setRightComponent(searchPanel);
+         searchPanel.activateSearchButton();
+         
+    }//GEN-LAST:event_SearchEmpActionPerformed
 
     /**
      * @param args the command line arguments

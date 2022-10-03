@@ -22,8 +22,8 @@ public class EmployeeData {
         return employeeData;
     }
     
-    public void setEmployeeData(ArrayList<Employee> employeeData){
-        this.employeeData = employeeData;
+    public ArrayList<Employee> setEmployeeData(){
+        return employeeData;
     }
     
     public Employee addNewEmployee(){
@@ -32,6 +32,10 @@ public class EmployeeData {
         return newEmployee; 
        
     }
+    
+//    public void getEmployeeData(){
+//        this.employeeData = employeeData;
+//    }
     
     public void deleteEmployee(Employee emp){
         employeeData.remove(emp);
