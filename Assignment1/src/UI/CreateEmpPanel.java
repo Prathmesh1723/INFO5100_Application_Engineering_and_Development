@@ -10,6 +10,7 @@ import java.awt.Image;
 import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -306,7 +307,9 @@ public class CreateEmpPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_EmpStartDateActionPerformed
 
     private void SaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveButtonActionPerformed
+        boolean empInfoValidation = this.empInfoValidation();
         
+        if(empInfoValidation){
         String empNametxt = EmpName.getText();
         String empIdtxt= EmpId.getText();
         String empContacttxt = EmpContactNum.getText();
@@ -349,7 +352,7 @@ public class CreateEmpPanel extends javax.swing.JPanel {
         EmpAge.setText("");
         EmpPhoto.setIcon(null);
         EmpGender.setText("");
-        
+        }
        
     }//GEN-LAST:event_SaveButtonActionPerformed
 
@@ -414,6 +417,36 @@ public class CreateEmpPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 
+    
+    private boolean empInfoValidation(){
+        if(!DateValidation(EmpStartDate.getText())){
+            JOptionPane.showMessageDialog(this, "Enter valid date");
+            return false;
+        }
+        
+        if(!EmpContactNum.getText().matches("[0-9]+") || EmpContactNum.getText().length()!=10){
+            JOptionPane.showMessageDialog(this, "Enter valid 10 digit phone number");
+            return false;
+        }
+        return true;
+    }
+    
+    public static boolean DateValidation(String startingDate){
+        if(startingDate.trim().equals("")){
+            return true;
+        }
+        else{
+            SimpleDateFormat sdformat = new SimpleDateFormat("mm/dd/yyyy");
+            sdformat.setLenient(false);
+            try{
+                Date JDate = sdformat.parse(startingDate);
+            }
+            catch(ParseException e){
+                return false;
+            }
+            return true;
+        }
+    }
 }
 
 

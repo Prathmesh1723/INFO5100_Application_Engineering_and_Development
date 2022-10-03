@@ -44,6 +44,9 @@ public class ReadEmpPanel extends javax.swing.JPanel {
         DeleteButton.setEnabled(false);
         SearchLabel.setVisible(true);
         GeneralSearch.setVisible(true);
+        
+        DefaultTableModel model = (DefaultTableModel) EmployeeTable.getModel();
+        model.setRowCount(0);
     }
 
     /**
