@@ -421,7 +421,7 @@ public class ReadEmpPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) EmployeeTable.getModel();
-        Employee selectedEmp = (Employee) model.getValueAt(selectedRowIndex, 1);
+        Employee selectedEmp = (Employee) model.getValueAt(selectedRowIndex, 0);
         
         employeeData.deleteEmployee(selectedEmp);  
         
