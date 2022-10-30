@@ -8,13 +8,10 @@ package Assignment2_model;
  *
  * @author prath
  */
-public class Assignment2 {
+public class SystemAdmin {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
 }
