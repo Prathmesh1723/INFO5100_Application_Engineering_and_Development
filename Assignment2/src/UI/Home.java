@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class Home extends javax.swing.JPanel {
     JPanel lowerPanel;               // initalize variable             

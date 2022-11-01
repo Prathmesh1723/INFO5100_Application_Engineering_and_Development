@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class CreateEncounter extends javax.swing.JPanel {
     JPanel lowerPanel;

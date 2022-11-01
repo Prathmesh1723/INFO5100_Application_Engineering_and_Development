@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class Person {
     private String name;

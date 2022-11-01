@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class CommunityPersonDirectory extends javax.swing.JPanel {
      JPanel lowerPanel;
@@ -164,7 +164,7 @@ public class CommunityPersonDirectory extends javax.swing.JPanel {
 
     private void createPersonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createPersonButtonActionPerformed
         // TODO add your handling code here:
-        CommunityLoginPage addPersonJPanel = new CommunityLoginPage(lowerPanel, admin);
+        CommunityAdminLogin addPersonJPanel = new CommunityAdminLogin(lowerPanel, admin);
         lowerPanel.add("AddPersonJPanel",addPersonJPanel);
         CardLayout layout = (CardLayout)lowerPanel.getLayout();
         layout.next(lowerPanel);

@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class AddPatienData extends javax.swing.JPanel {
     Admin admin;

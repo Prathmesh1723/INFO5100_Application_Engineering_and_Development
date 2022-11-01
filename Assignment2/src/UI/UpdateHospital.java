@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class UpdateHospital extends javax.swing.JPanel {
   JPanel lowerPanel;

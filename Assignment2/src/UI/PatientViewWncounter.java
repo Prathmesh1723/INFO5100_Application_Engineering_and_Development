@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class PatientViewWncounter extends javax.swing.JPanel {
     Person person;

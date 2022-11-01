@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class DoctorCreateEncounter extends javax.swing.JPanel {
     Admin admin;

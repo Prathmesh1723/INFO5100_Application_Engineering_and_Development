@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class SystemDirectory extends javax.swing.JFrame {
 Person person;
@@ -319,7 +319,7 @@ Person person;
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        AdminWindow adminWindow = new AdminWindow(lowerPanel, admin);
+        AdminLanding adminWindow = new AdminLanding(lowerPanel, admin);
         lowerPanel.add("AdminWindow",adminWindow);
         CardLayout layout = (CardLayout)lowerPanel.getLayout();
         layout.next(lowerPanel);

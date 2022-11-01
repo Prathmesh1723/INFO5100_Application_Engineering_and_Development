@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class PatientMainScreen extends javax.swing.JPanel {
     //Admin admin;
@@ -22,6 +22,7 @@ public class PatientMainScreen extends javax.swing.JPanel {
     Admin admin;
     JPanel lowerPanel;
     private ArrayList<Person> patientDir;
+    private ArrayList<Person> personDir;
     /**
      * Creates new form PatientMainScreen
      */
@@ -29,6 +30,8 @@ public class PatientMainScreen extends javax.swing.JPanel {
                initComponents();
         this.lowerPanel =lowerPanel;
         this.admin = admin;
+        personDir = admin.getPersonDirectory();
+        patientDir = admin.getPatientDirectory();
         loadpatientTable();
     }
 
@@ -115,7 +118,7 @@ public class PatientMainScreen extends javax.swing.JPanel {
         });
 
         BackMain.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        BackMain.setText("BACK");
+        BackMain.setText("LOGOUT");
         BackMain.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackMainActionPerformed(evt);
@@ -241,7 +244,7 @@ public class PatientMainScreen extends javax.swing.JPanel {
     private void BackMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackMainActionPerformed
           // TODO add your handling code here:
           this.patientDir=admin.getPatientDirectory();
-          CommanScreen CommanScreen=new CommanScreen(lowerPanel,patientDir);
+          CommonScreen CommanScreen=new CommonScreen(lowerPanel,admin,patientDir,personDir);
           lowerPanel.add("CommanScreen",CommanScreen);
            CardLayout cardLayout = (CardLayout)lowerPanel.getLayout();
          cardLayout.next(lowerPanel);

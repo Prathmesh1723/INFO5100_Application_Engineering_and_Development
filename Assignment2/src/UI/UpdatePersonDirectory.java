@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author 
  */
 public class UpdatePersonDirectory extends javax.swing.JPanel {
     private JPanel lowerPanel;
@@ -292,8 +292,8 @@ public class UpdatePersonDirectory extends javax.swing.JPanel {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        CommunityPersonDirectory CommunityPersonDirectory = new CommunityPersonDirectory(lowerPanel, admin);
-        lowerPanel.add("personWindow",CommunityPersonDirectory);
+        PersonDirectory PersonDirectory = new PersonDirectory(lowerPanel, admin);
+        lowerPanel.add("PersonPanel",PersonDirectory);
         CardLayout layout = (CardLayout)lowerPanel.getLayout();
         layout.next(lowerPanel);
     }//GEN-LAST:event_backButtonActionPerformed

@@ -5,23 +5,35 @@
 package UI;
 
 import Model.Admin;
+import Model.Person;
 import java.awt.CardLayout;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.util.ArrayList;
 import javax.swing.JPanel;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
-public class AdminWindow extends javax.swing.JPanel {
+public class AdminLanding extends javax.swing.JPanel {
     Admin admin;
     JPanel lowerPanel;
+    private ArrayList<Person> personDir;
+    private ArrayList<Person> patientDir;
     /**
      * Creates new form AdminWindow
      */
-    public AdminWindow(JPanel lowerPanel, Admin admin) {
+    public AdminLanding(JPanel lowerPanel, Admin admin) {
         initComponents();
         this.lowerPanel =lowerPanel;
         this.admin = admin;
+        personDir = admin.getPersonDirectory();
+        patientDir = admin.getPatientDirectory();
+        
+//        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//        setBounds(0,0,screenSize.width, screenSize.height);
+//        setVisible(true);
     }
 
     /**
@@ -57,7 +69,7 @@ public class AdminWindow extends javax.swing.JPanel {
         });
 
         backButton.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        backButton.setText("<< BACK");
+        backButton.setText("LOGOUT");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -110,10 +122,10 @@ public class AdminWindow extends javax.swing.JPanel {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        CommanScreen homePanel = new CommanScreen(lowerPanel);
+        CommonScreen homePanel = new CommonScreen(lowerPanel, admin, patientDir, personDir);
         lowerPanel.add("HomePanel",homePanel);
         CardLayout layout = (CardLayout)lowerPanel.getLayout();
-        layout.next(lowerPanel);
+        layout.show(lowerPanel,"HomePanel");
                                 
     }//GEN-LAST:event_backButtonActionPerformed
 

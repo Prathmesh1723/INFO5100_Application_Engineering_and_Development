@@ -6,7 +6,7 @@ package Model;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class Encounter {
     private String encounter;

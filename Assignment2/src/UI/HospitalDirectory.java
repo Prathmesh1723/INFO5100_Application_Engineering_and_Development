@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class HospitalDirectory extends javax.swing.JPanel {
     Admin admin;

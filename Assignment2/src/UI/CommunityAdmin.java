@@ -6,7 +6,7 @@ package UI;
 
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class CommunityAdmin extends javax.swing.JPanel {
 

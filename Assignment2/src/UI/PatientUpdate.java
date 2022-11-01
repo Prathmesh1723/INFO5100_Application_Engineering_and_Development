@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
 import javax.swing.JPanel;
 /**
  *
- * @author Sakshi Sasalate
+ * @author Prathmesh Pardeshi
  */
 public class PatientUpdate extends javax.swing.JPanel {
 JPanel lowerPanel;
