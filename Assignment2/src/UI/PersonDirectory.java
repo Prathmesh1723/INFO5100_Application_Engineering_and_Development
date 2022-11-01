@@ -116,7 +116,7 @@ public class PersonDirectory extends javax.swing.JPanel {
         }
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel1.setText("HOSPITAL PERSON DIRECTORY");
+        jLabel1.setText("PERSON DIRECTORY");
 
         createPersonButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         createPersonButton.setText("CREATE NEW ENTRY");
@@ -201,7 +201,7 @@ public class PersonDirectory extends javax.swing.JPanel {
         }
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel2.setText("HOSPITAL PATIENT DIRECTORY");
+        jLabel2.setText("PATIENT DIRECTORY");
 
         viewEncounterButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         viewEncounterButton.setText("VIEW ENCOUNTERS");
@@ -228,7 +228,7 @@ public class PersonDirectory extends javax.swing.JPanel {
         });
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel3.setText("HOSPITAL DOCTOR DIRECTORY");
+        jLabel3.setText("DOCTOR DIRECTORY");
 
         doctorTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

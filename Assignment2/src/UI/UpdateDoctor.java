@@ -54,6 +54,8 @@ public class UpdateDoctor extends javax.swing.JPanel {
         DocNText = new javax.swing.JLabel();
         DocCommTxt = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+
         backButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         backButton.setText("<< BACK");
         backButton.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +65,7 @@ public class UpdateDoctor extends javax.swing.JPanel {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("UPDATE PERSON C");
+        jLabel1.setText("UPDATE DOCTOR");
 
         DocidTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

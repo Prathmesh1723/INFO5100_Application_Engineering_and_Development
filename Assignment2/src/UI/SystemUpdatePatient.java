@@ -42,34 +42,26 @@ private JPanel lowerPanel;
 
         addPersonPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        idTF = new javax.swing.JTextField();
-        nameTF = new javax.swing.JTextField();
-        genderTF = new javax.swing.JTextField();
-        ageTF = new javax.swing.JTextField();
-        hgTF = new javax.swing.JTextField();
-        bpTF = new javax.swing.JTextField();
-        pastIllnessTF = new javax.swing.JTextField();
-        communityTF = new javax.swing.JTextField();
-        cityTF = new javax.swing.JTextField();
+        ID = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
+        Gender = new javax.swing.JLabel();
+        Age = new javax.swing.JLabel();
+        Community = new javax.swing.JLabel();
+        City = new javax.swing.JLabel();
+        personIDTxt = new javax.swing.JTextField();
+        personNameTxt = new javax.swing.JTextField();
+        genderTxt = new javax.swing.JTextField();
+        AgeTxt = new javax.swing.JTextField();
+        communityTxt = new javax.swing.JTextField();
+        cityTxt = new javax.swing.JTextField();
         backButton = new javax.swing.JButton();
-        editDetailsButton = new javax.swing.JButton();
-        clearButton = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        illnessTF = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        houseTF = new javax.swing.JTextField();
-        isPatientCB = new javax.swing.JCheckBox();
-        patientStatusTF = new javax.swing.JTextField();
-        saveDetailsButton = new javax.swing.JButton();
+        editBtn = new javax.swing.JButton();
+        clearBtn = new javax.swing.JButton();
+        House = new javax.swing.JLabel();
+        houseTxt = new javax.swing.JTextField();
+        PatientStatus = new javax.swing.JCheckBox();
+        personIsPatient = new javax.swing.JTextField();
+        saveBtn = new javax.swing.JButton();
         nameVal = new javax.swing.JLabel();
         ageVal = new javax.swing.JLabel();
         pulseVal = new javax.swing.JLabel();
@@ -80,112 +72,84 @@ private JPanel lowerPanel;
         illVal = new javax.swing.JLabel();
         genderVal = new javax.swing.JLabel();
         pastIllVal = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Illness = new javax.swing.JLabel();
+        PastIllness = new javax.swing.JLabel();
+        pastIllnessTxt = new javax.swing.JTextField();
+        illnessTxt = new javax.swing.JTextField();
+        Pulse = new javax.swing.JLabel();
+        pulseTxt = new javax.swing.JTextField();
+        bpTxt = new javax.swing.JTextField();
+        BloodPressure = new javax.swing.JLabel();
+        VitalsLbl = new javax.swing.JLabel();
 
-        addPersonPanel.setBackground(new java.awt.Color(204, 204, 204));
-        addPersonPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setPreferredSize(new java.awt.Dimension(1200, 1000));
+        setLayout(new java.awt.CardLayout());
+
+        addPersonPanel.setBackground(new java.awt.Color(204, 255, 255));
+        addPersonPanel.setPreferredSize(new java.awt.Dimension(1200, 1000));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("UPDATE PATIENT S");
-        addPersonPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 39, -1, 30));
+        jLabel1.setText("UPDATE PERSON DETAILS");
 
-        jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel2.setText("ID :");
-        addPersonPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 113, -1, -1));
+        ID.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        ID.setText("ID :");
 
-        jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel3.setText("NAME :");
-        addPersonPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 163, -1, -1));
+        Name.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        Name.setText("NAME :");
 
-        jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel4.setText("GENDER :");
-        addPersonPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 217, -1, -1));
+        Gender.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        Gender.setText("GENDER :");
 
-        jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel5.setText("AGE :");
-        addPersonPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 272, -1, -1));
+        Age.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        Age.setText("AGE :");
 
-        jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel6.setText("PULSE :");
-        addPersonPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 114, -1, -1));
+        Community.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        Community.setText("COMMUNITY :");
 
-        jLabel7.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel7.setText("BP. :");
-        addPersonPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 163, -1, -1));
+        City.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        City.setText("CITY :");
 
-        jLabel8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel8.setText("PAST ILLNESS :");
-        addPersonPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 379, -1, -1));
-
-        jLabel9.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel9.setText("COMMUNITY :");
-        addPersonPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 272, -1, -1));
-
-        jLabel10.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel10.setText("CITY :");
-        addPersonPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 321, -1, -1));
-
-        idTF.addActionListener(new java.awt.event.ActionListener() {
+        personIDTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idTFActionPerformed(evt);
+                personIDTxtActionPerformed(evt);
             }
         });
-        addPersonPanel.add(idTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 112, 154, -1));
 
-        nameTF.addKeyListener(new java.awt.event.KeyAdapter() {
+        personNameTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                nameTFKeyReleased(evt);
+                personNameTxtKeyReleased(evt);
             }
         });
-        addPersonPanel.add(nameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 162, 154, -1));
 
-        genderTF.addKeyListener(new java.awt.event.KeyAdapter() {
+        genderTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                genderTFKeyReleased(evt);
+                genderTxtKeyReleased(evt);
             }
         });
-        addPersonPanel.add(genderTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 216, 154, -1));
 
-        ageTF.addKeyListener(new java.awt.event.KeyAdapter() {
+        AgeTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                ageTFKeyReleased(evt);
+                AgeTxtKeyReleased(evt);
             }
         });
-        addPersonPanel.add(ageTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 271, 154, -1));
 
-        hgTF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                hgTFKeyReleased(evt);
+        communityTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                communityTxtActionPerformed(evt);
             }
         });
-        addPersonPanel.add(hgTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 113, 150, -1));
+        communityTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                communityTxtKeyReleased(evt);
+            }
+        });
 
-        bpTF.addKeyListener(new java.awt.event.KeyAdapter() {
+        cityTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                bpTFKeyReleased(evt);
+                cityTxtKeyReleased(evt);
             }
         });
-        addPersonPanel.add(bpTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 162, 150, -1));
-
-        pastIllnessTF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                pastIllnessTFKeyReleased(evt);
-            }
-        });
-        addPersonPanel.add(pastIllnessTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 378, 118, -1));
-
-        communityTF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                communityTFKeyReleased(evt);
-            }
-        });
-        addPersonPanel.add(communityTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 271, 150, -1));
-
-        cityTF.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                cityTFKeyReleased(evt);
-            }
-        });
-        addPersonPanel.add(cityTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 320, 150, -1));
 
         backButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         backButton.setText("<< BACK");
@@ -194,201 +158,459 @@ private JPanel lowerPanel;
                 backButtonActionPerformed(evt);
             }
         });
-        addPersonPanel.add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 28, 107, 41));
 
-        editDetailsButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        editDetailsButton.setText("EDIT DETAILS");
-        editDetailsButton.addActionListener(new java.awt.event.ActionListener() {
+        editBtn.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        editBtn.setText("EDIT");
+        editBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editDetailsButtonActionPerformed(evt);
+                editBtnActionPerformed(evt);
             }
         });
-        addPersonPanel.add(editDetailsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 450, -1, 41));
 
-        clearButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        clearButton.setText("CLEAR");
-        clearButton.addActionListener(new java.awt.event.ActionListener() {
+        clearBtn.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        clearBtn.setText("CLEAR");
+        clearBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearButtonActionPerformed(evt);
+                clearBtnActionPerformed(evt);
             }
         });
-        addPersonPanel.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(619, 450, 114, 41));
 
-        jLabel11.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel11.setText("ILLNESS :");
-        addPersonPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 321, -1, -1));
+        House.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        House.setText("HOUSE :");
 
-        illnessTF.addKeyListener(new java.awt.event.KeyAdapter() {
+        houseTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                houseTxtActionPerformed(evt);
+            }
+        });
+        houseTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                illnessTFKeyReleased(evt);
+                houseTxtKeyReleased(evt);
             }
         });
-        addPersonPanel.add(illnessTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 320, 151, -1));
 
-        jLabel13.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel13.setText("HOUSE :");
-        addPersonPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 217, -1, -1));
-
-        houseTF.addActionListener(new java.awt.event.ActionListener() {
+        PatientStatus.setBackground(new java.awt.Color(255, 255, 255));
+        PatientStatus.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        PatientStatus.setText("IS PATIENT ?");
+        PatientStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                houseTFActionPerformed(evt);
+                PatientStatusActionPerformed(evt);
             }
         });
-        houseTF.addKeyListener(new java.awt.event.KeyAdapter() {
+
+        saveBtn.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        saveBtn.setText("SAVE");
+        saveBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveBtnActionPerformed(evt);
+            }
+        });
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 0, 255)));
+
+        Illness.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        Illness.setText("ILLNESS :");
+
+        PastIllness.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        PastIllness.setText("PAST ILLNESS :");
+
+        pastIllnessTxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                houseTFKeyReleased(evt);
+                pastIllnessTxtKeyReleased(evt);
             }
         });
-        addPersonPanel.add(houseTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(573, 216, 150, -1));
 
-        isPatientCB.setBackground(new java.awt.Color(255, 255, 255));
-        isPatientCB.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        isPatientCB.setText("IS PATIENT ?");
-        isPatientCB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                isPatientCBActionPerformed(evt);
+        illnessTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                illnessTxtKeyReleased(evt);
             }
         });
-        addPersonPanel.add(isPatientCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 375, -1, -1));
-        addPersonPanel.add(patientStatusTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(583, 378, 140, -1));
 
-        saveDetailsButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        saveDetailsButton.setText("SAVE DETAILS");
-        saveDetailsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveDetailsButtonActionPerformed(evt);
+        Pulse.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        Pulse.setText("PULSE :");
+
+        pulseTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                pulseTxtKeyReleased(evt);
             }
         });
-        addPersonPanel.add(saveDetailsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 450, -1, 41));
-        addPersonPanel.add(nameVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 140, 20));
-        addPersonPanel.add(ageVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 130, 20));
-        addPersonPanel.add(pulseVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 150, 10));
-        addPersonPanel.add(bpVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 140, 10));
-        addPersonPanel.add(houseVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 140, 20));
-        addPersonPanel.add(comVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, 140, 10));
-        addPersonPanel.add(cityVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, 150, 20));
-        addPersonPanel.add(illVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 120, 20));
-        addPersonPanel.add(genderVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 130, 20));
-        addPersonPanel.add(pastIllVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 70, 10));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(addPersonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        bpTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                bpTxtKeyReleased(evt);
+            }
+        });
+
+        BloodPressure.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        BloodPressure.setText("BP. :");
+
+        VitalsLbl.setFont(new java.awt.Font("Verdana", 0, 24)); // NOI18N
+        VitalsLbl.setText("VITAL RECORDS");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PastIllness)
+                            .addComponent(Illness)
+                            .addComponent(Pulse)
+                            .addComponent(BloodPressure))
+                        .addGap(76, 76, 76)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(illnessTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pulseTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pastIllnessTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bpTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(181, 181, 181)
+                        .addComponent(VitalsLbl)))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(addPersonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {bpTxt, pastIllnessTxt, pulseTxt});
+
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(VitalsLbl)
+                .addGap(49, 49, 49)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(Illness)
+                        .addGap(3, 3, 3))
+                    .addComponent(illnessTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pastIllnessTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PastIllness))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pulseTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pulse))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BloodPressure)
+                    .addComponent(bpTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {bpTxt, pastIllnessTxt, pulseTxt});
+
+        javax.swing.GroupLayout addPersonPanelLayout = new javax.swing.GroupLayout(addPersonPanel);
+        addPersonPanel.setLayout(addPersonPanelLayout);
+        addPersonPanelLayout.setHorizontalGroup(
+            addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGap(90, 90, 90)
+                                .addComponent(ageVal, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(City)
+                            .addComponent(Community)
+                            .addComponent(House)
+                            .addComponent(PatientStatus))
+                        .addGap(18, 18, 18)
+                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addComponent(personIsPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(personNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(communityTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(houseTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cityTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                        .addComponent(genderTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(personIDTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cityVal, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(comVal, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGap(140, 140, 140)
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                                .addGap(90, 90, 90)
+                                                .addComponent(genderVal, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                                        .addComponent(Name)
+                                                        .addGap(33, 33, 33))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addPersonPanelLayout.createSequentialGroup()
+                                                        .addComponent(Gender)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                                                .addComponent(nameVal, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(Age))
+                                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                                .addGap(475, 475, 475)
+                                                .addComponent(houseVal, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                                .addGap(43, 43, 43)
+                                                .addComponent(AgeTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))))
+                                    .addComponent(ID)))
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(245, 245, 245)
+                                .addComponent(jLabel1)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(848, 848, 848))
+            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGap(1025, 1025, 1025)
+                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pulseVal, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(bpVal, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGap(274, 274, 274)
+                        .addComponent(pastIllVal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(179, 179, 179)
+                        .addComponent(editBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)
+                        .addComponent(saveBtn)
+                        .addGap(59, 59, 59)
+                        .addComponent(clearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGap(216, 216, 216)
+                        .addComponent(illVal, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        addPersonPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {AgeTxt, Community, cityTxt, communityTxt, genderTxt, houseTxt, personIDTxt, personIsPatient, personNameTxt});
+
+        addPersonPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {clearBtn, editBtn, saveBtn});
+
+        addPersonPanelLayout.setVerticalGroup(
+            addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGap(109, 109, 109)
+                                .addComponent(ID))
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGap(210, 210, 210)
+                                .addComponent(houseVal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGap(111, 111, 111)
+                                .addComponent(personIDTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(Name)
+                                    .addComponent(personNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                        .addGap(28, 28, 28)
+                                        .addComponent(nameVal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(Gender)
+                                            .addComponent(genderTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(genderVal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addPersonPanelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Age)
+                                .addGap(44, 44, 44))
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addComponent(ageVal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(AgeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(2, 2, 2)
+                                        .addComponent(comVal, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(25, 25, 25)))
+                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(City)
+                                    .addComponent(cityTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(26, 26, 26)
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(communityTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Community))
+                                .addGap(22, 22, 22)
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(House)
+                                    .addComponent(houseTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(39, 39, 39)
+                                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(PatientStatus)
+                                    .addComponent(personIsPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(29, 29, 29))
+                            .addGroup(addPersonPanelLayout.createSequentialGroup()
+                                .addComponent(cityVal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(214, 214, 214))))
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(illVal, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(addPersonPanelLayout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(pastIllVal, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(176, 176, 176)
+                        .addComponent(pulseVal, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(bpVal, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addPersonPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(addPersonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(editBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(saveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(189, 189, 189))))
+        );
+
+        addPersonPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AgeTxt, Community, cityTxt, communityTxt, genderTxt, houseTxt, personIDTxt, personIsPatient, personNameTxt});
+
+        addPersonPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {clearBtn, editBtn, saveBtn});
+
+        add(addPersonPanel, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void idTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTFActionPerformed
+    private void personIDTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personIDTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_idTFActionPerformed
+    }//GEN-LAST:event_personIDTxtActionPerformed
 
-    private void nameTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameTFKeyReleased
+    private void personNameTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_personNameTxtKeyReleased
         // TODO add your handling code here:
         String Name ="^[a-zA-Z\\s]{0,30}$";
         Pattern p = Pattern.compile(Name);
-        Matcher match= p.matcher(nameTF.getText());
+        Matcher match= p.matcher(personNameTxt.getText());
         if(!match.matches()){
             nameVal.setText("Invalid input!");
         }
         else {
             nameVal.setText("");
         }
-    }//GEN-LAST:event_nameTFKeyReleased
+    }//GEN-LAST:event_personNameTxtKeyReleased
 
-    private void genderTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_genderTFKeyReleased
+    private void genderTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_genderTxtKeyReleased
         // TODO add your handling code here:
         String Name ="^[a-zA-Z\\s]{0,30}$";
         Pattern p = Pattern.compile(Name);
-        Matcher match= p.matcher(genderTF.getText());
+        Matcher match= p.matcher(genderTxt.getText());
         if(!match.matches()){
             genderVal.setText("Invalid input!");
         }
         else {
             genderVal.setText("");
         }
-    }//GEN-LAST:event_genderTFKeyReleased
+    }//GEN-LAST:event_genderTxtKeyReleased
 
-    private void ageTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ageTFKeyReleased
+    private void AgeTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AgeTxtKeyReleased
         // TODO add your handling code here:
         String age ="^[0-9]{0,10}$";
         Pattern p = Pattern.compile(age);
-        Matcher match= p.matcher(ageTF.getText());
+        Matcher match= p.matcher(AgeTxt.getText());
         if(!match.matches()){
             ageVal.setText("Invalid! Only numeric input");
         }
         else {
             ageVal.setText("");
-    }//GEN-LAST:event_ageTFKeyReleased
+    }//GEN-LAST:event_AgeTxtKeyReleased
     }
-    private void hgTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_hgTFKeyReleased
+    private void pulseTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pulseTxtKeyReleased
         // TODO add your handling code here:
         String str ="^[0-9]{0,10}$";
         Pattern p = Pattern.compile(str);
-        Matcher match= p.matcher(hgTF.getText());
+        Matcher match= p.matcher(pulseTxt.getText());
         if(!match.matches()){
             pulseVal.setText("Invalid! Only numeric input");
         }
         else {
             pulseVal.setText("");
         }
-    }//GEN-LAST:event_hgTFKeyReleased
+    }//GEN-LAST:event_pulseTxtKeyReleased
 
-    private void bpTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bpTFKeyReleased
+    private void bpTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bpTxtKeyReleased
         // TODO add your handling code here:
         String str ="^[0-9]{0,10}$";
         Pattern p = Pattern.compile(str);
-        Matcher match= p.matcher(bpTF.getText());
+        Matcher match= p.matcher(bpTxt.getText());
         if(!match.matches()){
             bpVal.setText("Invalid! Only numeric input");
         }
         else {
             bpVal.setText("");
         }
-    }//GEN-LAST:event_bpTFKeyReleased
+    }//GEN-LAST:event_bpTxtKeyReleased
 
-    private void pastIllnessTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pastIllnessTFKeyReleased
+    private void pastIllnessTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pastIllnessTxtKeyReleased
         // TODO add your handling code here:
         String str ="^[a-zA-Z\\s]{0,30}$";
         Pattern p = Pattern.compile(str);
-        Matcher match= p.matcher(pastIllnessTF.getText());
+        Matcher match= p.matcher(pastIllnessTxt.getText());
         if(!match.matches()){
             pastIllVal.setText("Invalid input!");
         }
         else {
             pastIllVal.setText("");
         }
-    }//GEN-LAST:event_pastIllnessTFKeyReleased
+    }//GEN-LAST:event_pastIllnessTxtKeyReleased
 
-    private void communityTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_communityTFKeyReleased
+    private void communityTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_communityTxtKeyReleased
         // TODO add your handling code here:
         String str ="^[a-zA-Z\\s]{0,30}$";
         Pattern p = Pattern.compile(str);
-        Matcher match= p.matcher(communityTF.getText());
+        Matcher match= p.matcher(communityTxt.getText());
         if(!match.matches()){
             comVal.setText("Invalid input!");
         }
         else {
             comVal.setText("");
         }
-    }//GEN-LAST:event_communityTFKeyReleased
+    }//GEN-LAST:event_communityTxtKeyReleased
 
-    private void cityTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cityTFKeyReleased
+    private void cityTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cityTxtKeyReleased
         // TODO add your handling code here:
         String str ="^[a-zA-Z\\s]{0,30}$";
         Pattern p = Pattern.compile(str);
-        Matcher match= p.matcher(cityTF.getText());
+        Matcher match= p.matcher(cityTxt.getText());
         if(!match.matches()){
             cityVal.setText("Invalid input!");
         }
         else {
             cityVal.setText("");
         }
-    }//GEN-LAST:event_cityTFKeyReleased
+    }//GEN-LAST:event_cityTxtKeyReleased
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
@@ -398,196 +620,202 @@ private JPanel lowerPanel;
         layout.next(lowerPanel);
     }//GEN-LAST:event_backButtonActionPerformed
 
-    private void editDetailsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editDetailsButtonActionPerformed
+    private void editBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtnActionPerformed
         // TODO add your handling code here:
-        saveDetailsButton.setEnabled(true);
-        editDetailsButton.setEnabled(false);
+        saveBtn.setEnabled(true);
+        editBtn.setEnabled(false);
 
-        idTF.setEnabled(false);
-        nameTF.setEnabled(true);
-        genderTF.setEnabled(true);
-        ageTF.setEnabled(true);
-        illnessTF.setEnabled(true);
-        pastIllnessTF.setEnabled(true);
-        hgTF.setEnabled(true);
-        bpTF.setEnabled(true);
-        houseTF.setEnabled(true);
-        cityTF.setEnabled(true);
-        communityTF.setEnabled(true);
+        personIDTxt.setEnabled(false);
+        personNameTxt.setEnabled(true);
+        genderTxt.setEnabled(true);
+        AgeTxt.setEnabled(true);
+        illnessTxt.setEnabled(true);
+        pastIllnessTxt.setEnabled(true);
+        pulseTxt.setEnabled(true);
+        bpTxt.setEnabled(true);
+        houseTxt.setEnabled(true);
+        cityTxt.setEnabled(true);
+        communityTxt.setEnabled(true);
 
-        if (patientStatusTF.getText().equals("YES")) {
-            isPatientCB.setSelected(true);
+        if (personIsPatient.getText().equals("YES")) {
+            PatientStatus.setSelected(true);
         } else {
-            isPatientCB.setSelected(false);
+            PatientStatus.setSelected(false);
         }
 
-        patientStatusTF.setVisible(false);
-        isPatientCB.setEnabled(true);
-    }//GEN-LAST:event_editDetailsButtonActionPerformed
+        personIsPatient.setVisible(false);
+        PatientStatus.setEnabled(true);
+    }//GEN-LAST:event_editBtnActionPerformed
 
-    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
         // TODO add your handling code here:
-        nameTF.setText("");
-        genderTF.setText("");
-        ageTF.setText("");
-        illnessTF.setText("");
-        pastIllnessTF.setText("");
-        hgTF.setText("");
-        bpTF.setText("");
-        houseTF.setText("");
-        communityTF.setText("");
-        cityTF.setText("");
-    }//GEN-LAST:event_clearButtonActionPerformed
+        personNameTxt.setText("");
+        genderTxt.setText("");
+        AgeTxt.setText("");
+        illnessTxt.setText("");
+        pastIllnessTxt.setText("");
+        pulseTxt.setText("");
+        bpTxt.setText("");
+        houseTxt.setText("");
+        communityTxt.setText("");
+        cityTxt.setText("");
+    }//GEN-LAST:event_clearBtnActionPerformed
 
-    private void illnessTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_illnessTFKeyReleased
+    private void illnessTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_illnessTxtKeyReleased
         // TODO add your handling code here:
         String Name ="^[a-zA-Z\\s]{0,30}$";
         Pattern p = Pattern.compile(Name);
-        Matcher match= p.matcher(illnessTF.getText());
+        Matcher match= p.matcher(illnessTxt.getText());
         if(!match.matches()){
             illVal.setText("Invalid input!");
         }
         else {
             illVal.setText("");
         }
-    }//GEN-LAST:event_illnessTFKeyReleased
+    }//GEN-LAST:event_illnessTxtKeyReleased
 
-    private void houseTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseTFActionPerformed
+    private void houseTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_houseTFActionPerformed
+    }//GEN-LAST:event_houseTxtActionPerformed
 
-    private void houseTFKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_houseTFKeyReleased
+    private void houseTxtKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_houseTxtKeyReleased
         // TODO add your handling code here:
         String str ="^[a-zA-Z\\s]{0,30}$";
         Pattern p = Pattern.compile(str);
-        Matcher match= p.matcher(houseTF.getText());
+        Matcher match= p.matcher(houseTxt.getText());
         if(!match.matches()){
             houseVal.setText("Invalid input!");
         }
         else {
             houseVal.setText("");
         }
-    }//GEN-LAST:event_houseTFKeyReleased
+    }//GEN-LAST:event_houseTxtKeyReleased
 
-    private void isPatientCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isPatientCBActionPerformed
+    private void PatientStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PatientStatusActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_isPatientCBActionPerformed
+    }//GEN-LAST:event_PatientStatusActionPerformed
 
-    private void saveDetailsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveDetailsButtonActionPerformed
+    private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         // TODO add your handling code here:
-        saveDetailsButton.setEnabled(false);
-        editDetailsButton.setEnabled(true);
+        saveBtn.setEnabled(false);
+        editBtn.setEnabled(true);
 
-        isPatientCB.setEnabled(false);
+        PatientStatus.setEnabled(false);
 
-        nameTF.setEnabled(false);
-        genderTF.setEnabled(false);
-        ageTF.setEnabled(false);
-        illnessTF.setEnabled(false);
-        pastIllnessTF.setEnabled(false);
-        hgTF.setEnabled(false);
-        bpTF.setEnabled(false);
-        houseTF.setEnabled(false);
-        communityTF.setEnabled(false);
-        cityTF.setEnabled(false);
+        personNameTxt.setEnabled(false);
+        genderTxt.setEnabled(false);
+        AgeTxt.setEnabled(false);
+        illnessTxt.setEnabled(false);
+        pastIllnessTxt.setEnabled(false);
+        pulseTxt.setEnabled(false);
+        bpTxt.setEnabled(false);
+        houseTxt.setEnabled(false);
+        communityTxt.setEnabled(false);
+        cityTxt.setEnabled(false);
 
-        if (isPatientCB.isSelected()) {
-            patientStatusTF.setText("YES");
+        if (PatientStatus.isSelected()) {
+            personIsPatient.setText("YES");
         } else {
-            patientStatusTF.setText("NO");
+            personIsPatient.setText("NO");
         }
 
-        patientStatusTF.setVisible(true);
+        personIsPatient.setVisible(true);
 
-        person.setIsPatient(isPatientCB.isSelected());
-        person.setName(nameTF.getText());
-        person.setGender(genderTF.getText());
-        person.setAge(Integer.parseInt(ageTF.getText()));
-        person.setIllness(illnessTF.getText());
-        person.setPastIllness(pastIllnessTF.getText());
-        person.setHB(Double.parseDouble(hgTF.getText()));
-        person.setBloodPressure(Double.parseDouble(bpTF.getText()));
-        person.getResidence().setCity(cityTF.getText());
-        person.getResidence().setCommunity(communityTF.getText());
-        person.getResidence().setHouse(houseTF.getText());
+        person.setIsPatient(PatientStatus.isSelected());
+        person.setName(personNameTxt.getText());
+        person.setGender(genderTxt.getText());
+        person.setAge(Integer.parseInt(AgeTxt.getText()));
+        person.setIllness(illnessTxt.getText());
+        person.setPastIllness(pastIllnessTxt.getText());
+        person.setHB(Double.parseDouble(pulseTxt.getText()));
+        person.setBloodPressure(Double.parseDouble(bpTxt.getText()));
+        person.getResidence().setCity(cityTxt.getText());
+        person.getResidence().setCommunity(communityTxt.getText());
+        person.getResidence().setHouse(houseTxt.getText());
 
-    }//GEN-LAST:event_saveDetailsButtonActionPerformed
+    }//GEN-LAST:event_saveBtnActionPerformed
+
+    private void communityTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_communityTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_communityTxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Age;
+    private javax.swing.JTextField AgeTxt;
+    private javax.swing.JLabel BloodPressure;
+    private javax.swing.JLabel City;
+    private javax.swing.JLabel Community;
+    private javax.swing.JLabel Gender;
+    private javax.swing.JLabel House;
+    private javax.swing.JLabel ID;
+    private javax.swing.JLabel Illness;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel PastIllness;
+    private javax.swing.JCheckBox PatientStatus;
+    private javax.swing.JLabel Pulse;
+    private javax.swing.JLabel VitalsLbl;
     private javax.swing.JPanel addPersonPanel;
-    private javax.swing.JTextField ageTF;
     private javax.swing.JLabel ageVal;
     private javax.swing.JButton backButton;
-    private javax.swing.JTextField bpTF;
+    private javax.swing.JTextField bpTxt;
     private javax.swing.JLabel bpVal;
-    private javax.swing.JTextField cityTF;
+    private javax.swing.JTextField cityTxt;
     private javax.swing.JLabel cityVal;
-    private javax.swing.JButton clearButton;
+    private javax.swing.JButton clearBtn;
     private javax.swing.JLabel comVal;
-    private javax.swing.JTextField communityTF;
-    private javax.swing.JButton editDetailsButton;
-    private javax.swing.JTextField genderTF;
+    private javax.swing.JTextField communityTxt;
+    private javax.swing.JButton editBtn;
+    private javax.swing.JTextField genderTxt;
     private javax.swing.JLabel genderVal;
-    private javax.swing.JTextField hgTF;
-    private javax.swing.JTextField houseTF;
+    private javax.swing.JTextField houseTxt;
     private javax.swing.JLabel houseVal;
-    private javax.swing.JTextField idTF;
     private javax.swing.JLabel illVal;
-    private javax.swing.JTextField illnessTF;
-    private javax.swing.JCheckBox isPatientCB;
+    private javax.swing.JTextField illnessTxt;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField nameTF;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nameVal;
     private javax.swing.JLabel pastIllVal;
-    private javax.swing.JTextField pastIllnessTF;
-    private javax.swing.JTextField patientStatusTF;
+    private javax.swing.JTextField pastIllnessTxt;
+    private javax.swing.JTextField personIDTxt;
+    private javax.swing.JTextField personIsPatient;
+    private javax.swing.JTextField personNameTxt;
+    private javax.swing.JTextField pulseTxt;
     private javax.swing.JLabel pulseVal;
-    private javax.swing.JButton saveDetailsButton;
+    private javax.swing.JButton saveBtn;
     // End of variables declaration//GEN-END:variables
 
   private void getPersonDetails() {
         if(person.isIsPatient() == true){
-            patientStatusTF.setText("YES");
+            personIsPatient.setText("YES");
         }
         else{
-            patientStatusTF.setText("NO");
+            personIsPatient.setText("NO");
         }
-        isPatientCB.setEnabled(false);
-        idTF.setText(String.valueOf(person.getId()));
-        idTF.setEnabled(false);
-        nameTF.setText(person.getName());
-        nameTF.setEnabled(false);
-        genderTF.setText(person.getGender());
-        genderTF.setEnabled(false);
-        ageTF.setText(String.valueOf(person.getAge()));
-        ageTF.setEnabled(false);
-        illnessTF.setText(person.getIllness());
-        illnessTF.setEnabled(false);
-        pastIllnessTF.setText(person.getPastIllness());
-        pastIllnessTF.setEnabled(false);
-        hgTF.setText(String.valueOf(person.getHB()));
-        hgTF.setEnabled(false);
-        bpTF.setText(String.valueOf(person.getBloodPressure()));
-        bpTF.setEnabled(false);
-        cityTF.setText(person.getResidence().getCity());
-        cityTF.setEnabled(false);
-        communityTF.setText(person.getResidence().getCommunity());
-        communityTF.setEnabled(false);
-        houseTF.setText(person.getResidence().getHouse());
-        houseTF.setEnabled(false);
+        PatientStatus.setEnabled(false);
+        personIDTxt.setText(String.valueOf(person.getId()));
+        personIDTxt.setEnabled(false);
+        personNameTxt.setText(person.getName());
+        personNameTxt.setEnabled(false);
+        genderTxt.setText(person.getGender());
+        genderTxt.setEnabled(false);
+        AgeTxt.setText(String.valueOf(person.getAge()));
+        AgeTxt.setEnabled(false);
+        illnessTxt.setText(person.getIllness());
+        illnessTxt.setEnabled(false);
+        pastIllnessTxt.setText(person.getPastIllness());
+        pastIllnessTxt.setEnabled(false);
+        pulseTxt.setText(String.valueOf(person.getHB()));
+        pulseTxt.setEnabled(false);
+        bpTxt.setText(String.valueOf(person.getBloodPressure()));
+        bpTxt.setEnabled(false);
+        cityTxt.setText(person.getResidence().getCity());
+        cityTxt.setEnabled(false);
+        communityTxt.setText(person.getResidence().getCommunity());
+        communityTxt.setEnabled(false);
+        houseTxt.setText(person.getResidence().getHouse());
+        houseTxt.setEnabled(false);
 
-        saveDetailsButton.setEnabled(false);
+        saveBtn.setEnabled(false);
     }
 }

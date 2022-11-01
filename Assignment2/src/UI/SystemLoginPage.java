@@ -52,8 +52,9 @@ public class SystemLoginPage extends javax.swing.JPanel {
         PasswordTxt = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(204, 255, 255));
+
         jPanel8.setBackground(new java.awt.Color(204, 255, 255));
-        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         UsernameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,7 +69,7 @@ public class SystemLoginPage extends javax.swing.JPanel {
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel15.setText("PASSWORD");
 
-        BackButton6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BackButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         BackButton6.setText("BACK");
         BackButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,7 +77,7 @@ public class SystemLoginPage extends javax.swing.JPanel {
             }
         });
 
-        LoginButton6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LoginButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         LoginButton6.setText("LOGIN");
         LoginButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +86,7 @@ public class SystemLoginPage extends javax.swing.JPanel {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        jLabel1.setText("SYSTEM ADMIN");
+        jLabel1.setText("SYSTEM ADMIN LOGIN");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -104,21 +105,20 @@ public class SystemLoginPage extends javax.swing.JPanel {
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(UsernameTxt)
                                     .addComponent(PasswordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(LoginButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(59, 59, 59)
-                                .addComponent(BackButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel1)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(391, 391, 391)
-                        .addComponent(jLabel1)))
-                .addContainerGap(412, Short.MAX_VALUE))
+                        .addGap(400, 400, 400)
+                        .addComponent(LoginButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(BackButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(357, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(152, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
+                .addGap(68, 68, 68)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UsernameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -126,12 +126,14 @@ public class SystemLoginPage extends javax.swing.JPanel {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PasswordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(121, 121, 121)
+                .addGap(67, 67, 67)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LoginButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LoginButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BackButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(287, 287, 287))
+                .addGap(341, 341, 341))
         );
+
+        jPanel8Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BackButton6, LoginButton6});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -177,61 +179,13 @@ public class SystemLoginPage extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BackButton;
-    private javax.swing.JButton BackButton1;
-    private javax.swing.JButton BackButton2;
-    private javax.swing.JButton BackButton3;
-    private javax.swing.JButton BackButton4;
-    private javax.swing.JButton BackButton5;
     private javax.swing.JButton BackButton6;
-    private javax.swing.JButton CreateButton;
-    private javax.swing.JButton CreateButton1;
-    private javax.swing.JButton CreateButton2;
-    private javax.swing.JButton CreateButton3;
-    private javax.swing.JButton CreateButton4;
-    private javax.swing.JButton CreateButton5;
-    private javax.swing.JButton LoginButton;
-    private javax.swing.JButton LoginButton1;
-    private javax.swing.JButton LoginButton2;
-    private javax.swing.JButton LoginButton3;
-    private javax.swing.JButton LoginButton4;
-    private javax.swing.JButton LoginButton5;
     private javax.swing.JButton LoginButton6;
     private javax.swing.JPasswordField PasswordTxt;
-    private javax.swing.JPasswordField Passwordtxt;
-    private javax.swing.JPasswordField Passwordtxt1;
-    private javax.swing.JPasswordField Passwordtxt2;
-    private javax.swing.JPasswordField Passwordtxt3;
-    private javax.swing.JPasswordField Passwordtxt4;
-    private javax.swing.JTextField UsernameText;
-    private javax.swing.JTextField UsernameText1;
-    private javax.swing.JTextField UsernameText2;
-    private javax.swing.JTextField UsernameText3;
-    private javax.swing.JTextField UsernameText4;
-    private javax.swing.JTextField UsernameText5;
     private javax.swing.JTextField UsernameTxt;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
 }

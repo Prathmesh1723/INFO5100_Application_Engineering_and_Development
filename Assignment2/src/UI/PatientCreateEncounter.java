@@ -208,8 +208,8 @@ public class PatientCreateEncounter extends javax.swing.JPanel {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        PatientEncounter EncounterPanel = new PatientEncounter(lowerPanel, person,admin);
-        lowerPanel.add("EncounterPanel",EncounterPanel);
+        PatientViewEncounter viewEncounter = new PatientViewEncounter(lowerPanel, person,admin);
+        lowerPanel.add("EncounterPanel",viewEncounter);
         CardLayout layout = (CardLayout)lowerPanel.getLayout();
         layout.next(lowerPanel);
     }//GEN-LAST:event_backButtonActionPerformed

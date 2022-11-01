@@ -14,6 +14,15 @@ public class Admin {
     private ArrayList<Person> personDirectory;
     private ArrayList<Person> patientDirectory;
     private ArrayList<Doctor> doctorDirectory;
+    private ArrayList<Hospital> hospitalDirectory;
+
+    public ArrayList<Hospital> getHospitalDirectory() {
+        return hospitalDirectory;
+    }
+
+    public void setHospitalDirectory(ArrayList<Hospital> hospitalDirectory) {
+        this.hospitalDirectory = hospitalDirectory;
+    }
 
     public ArrayList<Doctor> getDoctorDirectory() {
         return doctorDirectory;

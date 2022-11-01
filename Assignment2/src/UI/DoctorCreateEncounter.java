@@ -55,7 +55,7 @@ public class DoctorCreateEncounter extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         doctorTF = new javax.swing.JTextField();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -212,8 +212,8 @@ public class DoctorCreateEncounter extends javax.swing.JPanel {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-        DoctorViwEncounter DoctorViwEncounter = new DoctorViwEncounter(lowerPanel,person, admin);
-        lowerPanel.add("DoctorViwEncounter",DoctorViwEncounter);
+        DoctorViewEncounter viewEncounterJPanel = new DoctorViewEncounter(lowerPanel, person,admin);
+        lowerPanel.add("EncounterPanel",viewEncounterJPanel);
         CardLayout layout = (CardLayout)lowerPanel.getLayout();
         layout.next(lowerPanel);
     }//GEN-LAST:event_backButtonActionPerformed

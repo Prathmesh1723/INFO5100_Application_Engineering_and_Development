@@ -6,6 +6,7 @@ package UI;
 import Model.Admin;
 import Model.Person;
 import Model.Encounter;
+import Model.Hospital;
 import Model.Resident;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -23,14 +25,18 @@ public class NewUser extends javax.swing.JPanel {
     Admin admin;
     JPanel lowerPanel;
     private ArrayList<Person> patientDir;
+    private ArrayList<Person> personDir;
+    private ArrayList<Hospital> hospitalDir;
+    
     /**
      * Creates new form NewUser
      */
-    public NewUser(JPanel lowerPanel,Admin admin,Person person) {
+    public NewUser(JPanel lowerPanel,Admin admin) {
         initComponents();
+        personDir = admin.getPersonDirectory();
         this.lowerPanel=lowerPanel;
         this.admin=admin;
-        this.person=person;
+        loadHospitalTable();
     }
 
     /**
@@ -42,10 +48,241 @@ public class NewUser extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        searchRadioButton = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        backButton = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        hospitalTable = new javax.swing.JTable();
+        SearchBtn = new javax.swing.JButton();
+        SearchTxt = new javax.swing.JTextField();
+        City = new javax.swing.JRadioButton();
+        Community = new javax.swing.JRadioButton();
+        SearchBy = new javax.swing.JLabel();
+
         setLayout(new java.awt.CardLayout());
+
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+
+        backButton.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        backButton.setText("BACK");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+
+        hospitalTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Hospital Name", "Hospital City", "Hospital Community"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(hospitalTable);
+
+        SearchBtn.setText("Search");
+        SearchBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchBtnActionPerformed(evt);
+            }
+        });
+
+        SearchTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SearchTxtMouseClicked(evt);
+            }
+        });
+
+        searchRadioButton.add(City);
+        City.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        City.setText("City");
+        City.setActionCommand("City");
+        City.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CityMouseClicked(evt);
+            }
+        });
+
+        searchRadioButton.add(Community);
+        Community.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Community.setText("Community");
+        Community.setActionCommand("Community");
+        Community.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CommunityMouseClicked(evt);
+            }
+        });
+
+        SearchBy.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        SearchBy.setText("Search Nearest Hospitals By-");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(SearchBy)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(City)
+                        .addGap(70, 70, 70)
+                        .addComponent(Community)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                        .addComponent(SearchTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(SearchBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(113, 113, 113))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(104, 104, 104)
+                    .addComponent(jScrollPane3)
+                    .addGap(104, 104, 104)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(129, 129, 129)
+                        .addComponent(SearchBy))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(289, 289, 289)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(SearchBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SearchTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Community)
+                            .addComponent(City))))
+                .addContainerGap(558, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(373, 373, 373)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(211, Short.MAX_VALUE)))
+        );
+
+        add(jPanel1, "card2");
     }// </editor-fold>//GEN-END:initComponents
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        // TODO add your handling code here:
+        CommonScreen homePanel = new CommonScreen(lowerPanel, admin, patientDir, personDir);
+        lowerPanel.add("HomePanel",homePanel);
+        CardLayout layout = (CardLayout)lowerPanel.getLayout();
+        layout.show(lowerPanel,"HomePanel");
+    }//GEN-LAST:event_backButtonActionPerformed
+
+    private void SearchBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBtnActionPerformed
+        // TODO add your handling code here:
+        String searchHospital = SearchTxt.getText();
+        ArrayList<Hospital> searchHos = new ArrayList<>();
+        
+        try{
+        for(Hospital h : admin.getHospitalDirectory()){
+                if(searchRadioButton.getSelection().getActionCommand().equalsIgnoreCase("City")){
+                    if(searchHospital.equalsIgnoreCase(String.valueOf(h.getHosCity()))){
+                        searchHos.add(h);
+                    }else if(searchHospital.equalsIgnoreCase("texas")){
+                        JOptionPane.showMessageDialog(this, "Sorry, We currently don't have any branches in this city right now");
+                        return;
+                    }
+                }else if(searchRadioButton.getSelection().getActionCommand().equalsIgnoreCase("Community")){
+                    if(searchHospital.equalsIgnoreCase(String.valueOf(h.getHoscommunity()))){
+                        searchHos.add(h);
+                    }
+                }
+        }
+        }catch(NullPointerException e){
+            JOptionPane.showMessageDialog(this, "Please select one radio button");
+         }
+        
+        for (Hospital h:searchHos){
+            searchHospitalTable(searchHos);
+        }
+    }//GEN-LAST:event_SearchBtnActionPerformed
+
+    private void SearchTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SearchTxtMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SearchTxtMouseClicked
+
+    private void CommunityMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CommunityMouseClicked
+        // TODO add your handling code here:
+        loadHospitalTable();
+        SearchTxt.setText("");
+    }//GEN-LAST:event_CommunityMouseClicked
+
+    private void CityMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CityMouseClicked
+        // TODO add your handling code here:
+        loadHospitalTable();
+        SearchTxt.setText("");
+    }//GEN-LAST:event_CityMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton City;
+    private javax.swing.JRadioButton Community;
+    private javax.swing.JButton SearchBtn;
+    private javax.swing.JLabel SearchBy;
+    private javax.swing.JTextField SearchTxt;
+    private javax.swing.JButton backButton;
+    private javax.swing.JTable hospitalTable;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.ButtonGroup searchRadioButton;
     // End of variables declaration//GEN-END:variables
+
+    public void loadHospitalTable() {
+        hospitalTable.setRowHeight(40);
+        int rowCount = hospitalTable.getRowCount();
+        DefaultTableModel model = (DefaultTableModel) hospitalTable.getModel();
+        for(int i=rowCount-1;i>=0;i--){
+            model.removeRow(i);
+        }
+        for (Hospital h : admin.getHospitalDirectory()) {
+            Object row[] = new Object[4];
+        
+            row[0] = h.getHosid();
+            row[1] = h;
+            row[2]= h.getHosCity();
+            row[3] = h.getHoscommunity();
+            
+            model.addRow(row);
+        }
+    }
+    
+    private void searchHospitalTable(ArrayList<Hospital> SearchHos){
+        DefaultTableModel model = (DefaultTableModel) hospitalTable.getModel();
+        model.setRowCount(0);
+        
+        for(Hospital hospital: SearchHos){
+            Object row[] = new Object[4];
+        
+            row[0] = hospital.getHosid();
+            row[1] = hospital;
+            row[2]= hospital.getHosCity();
+            row[3] = hospital.getHoscommunity();
+            
+            model.addRow(row);
+        }}
+
 }

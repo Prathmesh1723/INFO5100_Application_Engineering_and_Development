@@ -74,7 +74,9 @@ private ArrayList<Person> patientDir;
         jLabel3 = new javax.swing.JLabel();
         NewUser = new javax.swing.JButton();
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(204, 255, 255));
+
+        jPanel3.setBackground(new java.awt.Color(204, 255, 255));
 
         MainPanelScreen.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -221,6 +223,10 @@ private ArrayList<Person> patientDir;
 
     private void NewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewUserActionPerformed
         // TODO add your handling code here:
+        NewUser newUserPage = new NewUser(lowerPanel,admin);
+        lowerPanel.add("PatientAdmin",newUserPage);
+        CardLayout layout = (CardLayout)lowerPanel.getLayout();
+        layout.next(lowerPanel);
     }//GEN-LAST:event_NewUserActionPerformed
 
 

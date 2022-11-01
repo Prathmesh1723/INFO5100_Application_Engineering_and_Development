@@ -78,11 +78,11 @@ Person person;
         genderVal = new javax.swing.JLabel();
         pastIllVal = new javax.swing.JLabel();
 
-        addPersonPanel.setBackground(new java.awt.Color(204, 204, 204));
+        addPersonPanel.setBackground(new java.awt.Color(204, 255, 255));
         addPersonPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("UPDATE PATIENT D");
+        jLabel1.setText("UPDATE PATIENT");
         addPersonPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -205,7 +205,7 @@ Person person;
                 editDetailsButtonActionPerformed(evt);
             }
         });
-        addPersonPanel.add(editDetailsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 450, -1, 41));
+        addPersonPanel.add(editDetailsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, -1, 41));
 
         clearButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         clearButton.setText("CLEAR");
@@ -214,7 +214,7 @@ Person person;
                 clearButtonActionPerformed(evt);
             }
         });
-        addPersonPanel.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(619, 450, 114, 41));
+        addPersonPanel.add(clearButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, 114, 41));
 
         jLabel11.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel11.setText("ILLNESS :");
@@ -261,7 +261,7 @@ Person person;
                 saveDetailsButtonActionPerformed(evt);
             }
         });
-        addPersonPanel.add(saveDetailsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 450, -1, 41));
+        addPersonPanel.add(saveDetailsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, -1, 41));
         addPersonPanel.add(nameVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 140, 20));
         addPersonPanel.add(ageVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 130, 20));
         addPersonPanel.add(pulseVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 150, 10));

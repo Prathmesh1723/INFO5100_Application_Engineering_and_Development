@@ -8,6 +8,7 @@ import Model.Admin;
 import Model.Person;
 import Model.Doctor;
 import Model.Resident;
+import Model.Hospital;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;
@@ -36,10 +37,10 @@ public class LandingFrame extends javax.swing.JFrame {
         Resident residence = new Resident("1226","Beacon Street","Boston");
         Person p1 = new Person("Mahika",21,"Female", "NA","NA", residence, false, 130.0, 11.0);
         Person p2 = new Person("Shivani",21,"Female", "Fever","High BP", new Resident("0155", "Massachusett Ave", "Newyork"), true, 170.00d, 67.00d, new ArrayList<>());
-        Person p3 = new Person("Swarli",23,"Female", "Head ache","Elbow surgery", new Resident("0224", "Manhattan Ave", "Newyork"), false, 192.0, 80.00d, new ArrayList<>());
+        Person p3 = new Person("Swarali",23,"Female", "Head ache","Elbow surgery", new Resident("0224", "Manhattan Ave", "Newyork"), false, 192.0, 80.00d, new ArrayList<>());
         Person p4 = new Person("Neeraj",37,"Male", "diarrhea","Swine Flu", new Resident("1885", "Charles st", "Boston"), false, 130.00d, 60.00d, new ArrayList<>());
         Person p5 = new Person("Atharva",22,"Male", "NA","Allergy", new Resident("0215", "Boylston", "Boston"), true, 150.00d, 40.00d, new ArrayList<>());
-        Person p6 = new Person("Chinmay",22,"Female", "Fever","Swine Flu", new Resident("1215", "Roxbury", "Texas"), true, 150.00d, 80.00d, new ArrayList<>());
+        Person p6 = new Person("Chinmay",22,"Male", "Fever","Swine Flu", new Resident("1215", "Roxbury", "Texas"), true, 150.00d, 80.00d, new ArrayList<>());
 
         ArrayList<Person> personDirectory = new ArrayList<>();
         personDirectory.add(p1);
@@ -52,9 +53,9 @@ public class LandingFrame extends javax.swing.JFrame {
         ArrayList<Person> patientDirectory = new ArrayList<>();
         admin.setPatientDirectory(patientDirectory);
         
-        Doctor d1 = new Doctor("Victor", "Boston", 111);
-        Doctor d2 = new Doctor("Josh", "Neywork", 114);
-        Doctor d3 = new Doctor("Rahul", "Boston", 115);
+        Doctor d1 = new Doctor("Micheal", "Boston", 111);
+        Doctor d2 = new Doctor("Ryan", "Neywork", 114);
+        Doctor d3 = new Doctor("Dwight", "Boston", 115);
         Doctor d4 = new Doctor("Pamela", "Texas", 117);
         
         ArrayList<Doctor> doctorDirectory = new ArrayList<>();
@@ -63,6 +64,21 @@ public class LandingFrame extends javax.swing.JFrame {
         doctorDirectory.add(d3);
         doctorDirectory.add(d4);
         admin.setDoctorDirectory(doctorDirectory);
+        
+        Hospital h1 = new Hospital("Nobel", "Fenway", 100, "Boston");
+        Hospital h2 = new Hospital("Apollo", "Beacon Hill", 105, "Boston");
+        Hospital h3 = new Hospital("Apollo", "Manhattan St", 125, "Newyork");
+        Hospital h4 = new Hospital("Rockafella", "Big Apple", 105, "Newyork");
+        Hospital h5 = new Hospital("National", "Riverside", 130, "Boston");
+        
+        
+        ArrayList<Hospital> hospitalDirectory = new ArrayList<>();
+        hospitalDirectory.add(h1);
+        hospitalDirectory.add(h2);
+        hospitalDirectory.add(h3);
+        hospitalDirectory.add(h4);
+        hospitalDirectory.add(h5);
+        admin.setHospitalDirectory(hospitalDirectory);
 
     }
 
@@ -95,20 +111,20 @@ public class LandingFrame extends javax.swing.JFrame {
         upperPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 48)); // NOI18N
-        jLabel2.setText("    SAN HOSE HAMILTON HOSPITAL ");
+        jLabel2.setText("BOSTON CITY HEALTH CARE");
 
         javax.swing.GroupLayout upperPanelLayout = new javax.swing.GroupLayout(upperPanel);
         upperPanel.setLayout(upperPanelLayout);
         upperPanelLayout.setHorizontalGroup(
             upperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(upperPanelLayout.createSequentialGroup()
-                .addGap(363, 363, 363)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 897, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(361, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, upperPanelLayout.createSequentialGroup()
+                .addContainerGap(472, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 711, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(438, 438, 438))
         );
         upperPanelLayout.setVerticalGroup(
             upperPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jSplitPane1.setTopComponent(upperPanel);
@@ -265,6 +281,10 @@ public class LandingFrame extends javax.swing.JFrame {
 
     private void NewUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewUserActionPerformed
         // TODO add your handling code here:
+        NewUser newUserPage = new NewUser(lowerPanel,admin);
+        lowerPanel.add("PatientAdmin",newUserPage);
+        CardLayout layout = (CardLayout)lowerPanel.getLayout();
+        layout.next(lowerPanel);
     }//GEN-LAST:event_NewUserActionPerformed
 
     /**

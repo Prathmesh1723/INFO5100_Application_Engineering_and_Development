@@ -70,40 +70,8 @@ public class AddPersonData extends javax.swing.JPanel {
         ageVal = new javax.swing.JLabel();
         pulseVal = new javax.swing.JLabel();
         bpVal = new javax.swing.JLabel();
-        addPersonPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        nameTF1 = new javax.swing.JTextField();
-        genderTF1 = new javax.swing.JTextField();
-        ageTF1 = new javax.swing.JTextField();
-        hgTF1 = new javax.swing.JTextField();
-        bpTF1 = new javax.swing.JTextField();
-        pastIllnessTF1 = new javax.swing.JTextField();
-        communityTF1 = new javax.swing.JTextField();
-        cityTF1 = new javax.swing.JTextField();
-        backButton1 = new javax.swing.JButton();
-        saveDetailsButton1 = new javax.swing.JButton();
-        clearButton1 = new javax.swing.JButton();
-        jLabel21 = new javax.swing.JLabel();
-        illnessTF1 = new javax.swing.JTextField();
-        jLabel22 = new javax.swing.JLabel();
-        houseTF1 = new javax.swing.JTextField();
-        isPatientCB1 = new javax.swing.JCheckBox();
-        patientStatusTF1 = new javax.swing.JTextField();
-        nameVal1 = new javax.swing.JLabel();
-        genderVal1 = new javax.swing.JLabel();
-        ageVal1 = new javax.swing.JLabel();
-        pulseVal1 = new javax.swing.JLabel();
-        bpVal1 = new javax.swing.JLabel();
 
-        addPersonPanel.setBackground(new java.awt.Color(204, 204, 204));
+        addPersonPanel.setBackground(new java.awt.Color(204, 255, 255));
         addPersonPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -245,161 +213,15 @@ public class AddPersonData extends javax.swing.JPanel {
         addPersonPanel.add(pulseVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 134, 150, 20));
         addPersonPanel.add(bpVal, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 140, 20));
 
-        addPersonPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        addPersonPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setText("ADD NEW PERSON");
-        addPersonPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel12.setText("NAME :");
-        addPersonPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 114, -1, -1));
-
-        jLabel14.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel14.setText("GENDER :");
-        addPersonPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 168, -1, -1));
-
-        jLabel15.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel15.setText("AGE :");
-        addPersonPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 221, -1, -1));
-
-        jLabel16.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel16.setText("PULSE :");
-        addPersonPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 114, -1, -1));
-
-        jLabel17.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel17.setText("BP. :");
-        addPersonPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 168, -1, -1));
-
-        jLabel18.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel18.setText("PAST ILLNESS :");
-        addPersonPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 333, -1, -1));
-
-        jLabel19.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel19.setText("COMMUNITY :");
-        addPersonPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 277, -1, -1));
-
-        jLabel20.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel20.setText("CITY :");
-        addPersonPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 333, -1, -1));
-
-        nameTF1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                nameTF1KeyReleased(evt);
-            }
-        });
-        addPersonPanel1.add(nameTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 113, 154, -1));
-
-        genderTF1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                genderTF1KeyReleased(evt);
-            }
-        });
-        addPersonPanel1.add(genderTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 167, 154, -1));
-
-        ageTF1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                ageTF1KeyReleased(evt);
-            }
-        });
-        addPersonPanel1.add(ageTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 220, 154, -1));
-
-        hgTF1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                hgTF1KeyReleased(evt);
-            }
-        });
-        addPersonPanel1.add(hgTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 112, 150, -1));
-
-        bpTF1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                bpTF1KeyReleased(evt);
-            }
-        });
-        addPersonPanel1.add(bpTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 166, 150, -1));
-        addPersonPanel1.add(pastIllnessTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 332, 118, -1));
-        addPersonPanel1.add(communityTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 275, 140, -1));
-        addPersonPanel1.add(cityTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(575, 332, 140, -1));
-
-        backButton1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        backButton1.setText("BACK");
-        backButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButton1ActionPerformed(evt);
-            }
-        });
-        addPersonPanel1.add(backButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 450, 107, 41));
-
-        saveDetailsButton1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        saveDetailsButton1.setText("SAVE ");
-        saveDetailsButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveDetailsButton1ActionPerformed(evt);
-            }
-        });
-        addPersonPanel1.add(saveDetailsButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 90, 41));
-
-        clearButton1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        clearButton1.setText("CLEAR");
-        clearButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearButton1ActionPerformed(evt);
-            }
-        });
-        addPersonPanel1.add(clearButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, 110, 41));
-
-        jLabel21.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel21.setText("ILLNESS :");
-        addPersonPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 277, -1, -1));
-        addPersonPanel1.add(illnessTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 276, 150, -1));
-
-        jLabel22.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel22.setText("HOUSE :");
-        addPersonPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 221, -1, -1));
-
-        houseTF1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                houseTF1ActionPerformed(evt);
-            }
-        });
-        addPersonPanel1.add(houseTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 220, 150, -1));
-
-        isPatientCB1.setBackground(new java.awt.Color(255, 255, 255));
-        isPatientCB1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        isPatientCB1.setText("IS PATIENT ?");
-        isPatientCB1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                isPatientCB1ActionPerformed(evt);
-            }
-        });
-        addPersonPanel1.add(isPatientCB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, -1, -1));
-
-        patientStatusTF1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                patientStatusTF1ActionPerformed(evt);
-            }
-        });
-        addPersonPanel1.add(patientStatusTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 390, 130, -1));
-        addPersonPanel1.add(nameVal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 140, 20));
-        addPersonPanel1.add(genderVal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 150, 20));
-        addPersonPanel1.add(ageVal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 160, 20));
-        addPersonPanel1.add(pulseVal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 134, 150, 20));
-        addPersonPanel1.add(bpVal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 140, 20));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(addPersonPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 834, Short.MAX_VALUE)
-            .addComponent(addPersonPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 834, Short.MAX_VALUE)
+            .addComponent(addPersonPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(addPersonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addPersonPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(addPersonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -549,97 +371,27 @@ public class AddPersonData extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_bpTFKeyReleased
 
-    private void nameTF1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameTF1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTF1KeyReleased
-
-    private void genderTF1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_genderTF1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_genderTF1KeyReleased
-
-    private void ageTF1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ageTF1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ageTF1KeyReleased
-
-    private void hgTF1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_hgTF1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hgTF1KeyReleased
-
-    private void bpTF1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bpTF1KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bpTF1KeyReleased
-
-    private void backButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backButton1ActionPerformed
-
-    private void saveDetailsButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveDetailsButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_saveDetailsButton1ActionPerformed
-
-    private void clearButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearButton1ActionPerformed
-
-    private void houseTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_houseTF1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_houseTF1ActionPerformed
-
-    private void isPatientCB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isPatientCB1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_isPatientCB1ActionPerformed
-
-    private void patientStatusTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientStatusTF1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_patientStatusTF1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addPersonPanel;
-    private javax.swing.JPanel addPersonPanel1;
     private javax.swing.JTextField ageTF;
-    private javax.swing.JTextField ageTF1;
     private javax.swing.JLabel ageVal;
-    private javax.swing.JLabel ageVal1;
     private javax.swing.JButton backButton;
-    private javax.swing.JButton backButton1;
     private javax.swing.JTextField bpTF;
-    private javax.swing.JTextField bpTF1;
     private javax.swing.JLabel bpVal;
-    private javax.swing.JLabel bpVal1;
     private javax.swing.JTextField cityTF;
-    private javax.swing.JTextField cityTF1;
     private javax.swing.JButton clearButton;
-    private javax.swing.JButton clearButton1;
     private javax.swing.JTextField communityTF;
-    private javax.swing.JTextField communityTF1;
     private javax.swing.JTextField genderTF;
-    private javax.swing.JTextField genderTF1;
     private javax.swing.JLabel genderVal;
-    private javax.swing.JLabel genderVal1;
     private javax.swing.JTextField hgTF;
-    private javax.swing.JTextField hgTF1;
     private javax.swing.JTextField houseTF;
-    private javax.swing.JTextField houseTF1;
     private javax.swing.JTextField illnessTF;
-    private javax.swing.JTextField illnessTF1;
     private javax.swing.JCheckBox isPatientCB;
-    private javax.swing.JCheckBox isPatientCB1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -648,16 +400,10 @@ public class AddPersonData extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField nameTF;
-    private javax.swing.JTextField nameTF1;
     private javax.swing.JLabel nameVal;
-    private javax.swing.JLabel nameVal1;
     private javax.swing.JTextField pastIllnessTF;
-    private javax.swing.JTextField pastIllnessTF1;
     private javax.swing.JTextField patientStatusTF;
-    private javax.swing.JTextField patientStatusTF1;
     private javax.swing.JLabel pulseVal;
-    private javax.swing.JLabel pulseVal1;
     private javax.swing.JButton saveDetailsButton;
-    private javax.swing.JButton saveDetailsButton1;
     // End of variables declaration//GEN-END:variables
 }

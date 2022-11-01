@@ -73,11 +73,11 @@ Admin admin;
         pulseVal = new javax.swing.JLabel();
         bpVal = new javax.swing.JLabel();
 
-        addPersonPanel.setBackground(new java.awt.Color(204, 204, 204));
+        addPersonPanel.setBackground(new java.awt.Color(204, 255, 255));
         addPersonPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("ADD NEW PATIENT Doctor");
+        jLabel1.setText("ADD NEW PATIENT");
         addPersonPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
@@ -219,7 +219,7 @@ Admin admin;
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(addPersonPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
+            .addComponent(addPersonPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
