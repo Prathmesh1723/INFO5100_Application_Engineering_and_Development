@@ -6,6 +6,7 @@ package UI;
 
 import Model.Admin;
 import Model.Person;
+import Model.Doctor;
 import Model.Resident;
 //import UpdatePersonDirectory;
 import java.awt.CardLayout;
@@ -30,6 +31,7 @@ public class PersonDirectory extends javax.swing.JPanel {
         this.lowerPanel = lowerPanel;
         loadPersonTable();
         loadPatientTable();
+        loadDoctorTable();
     }
 
     /**
@@ -55,8 +57,13 @@ public class PersonDirectory extends javax.swing.JPanel {
         viewEncounterButton = new javax.swing.JButton();
         updatePatientButton = new javax.swing.JButton();
         deletePatientButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        doctorTable = new javax.swing.JTable();
+        updatePatientButton1 = new javax.swing.JButton();
+        deletePatientButton1 = new javax.swing.JButton();
 
-        personPanel.setBackground(new java.awt.Color(255, 255, 255));
+        personPanel.setBackground(new java.awt.Color(204, 255, 255));
 
         personTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -109,7 +116,7 @@ public class PersonDirectory extends javax.swing.JPanel {
         }
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel1.setText("GLOBAL HEALTH HOSPITAL PERSON DIRECTORY");
+        jLabel1.setText("HOSPITAL PERSON DIRECTORY");
 
         createPersonButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         createPersonButton.setText("CREATE NEW ENTRY");
@@ -194,7 +201,7 @@ public class PersonDirectory extends javax.swing.JPanel {
         }
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jLabel2.setText("GLOBAL HEALTH HOSPITAL PATIENT DIRECTORY");
+        jLabel2.setText("HOSPITAL PATIENT DIRECTORY");
 
         viewEncounterButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         viewEncounterButton.setText("VIEW ENCOUNTERS");
@@ -220,68 +227,149 @@ public class PersonDirectory extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel3.setText("HOSPITAL DOCTOR DIRECTORY");
+
+        doctorTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "ID", "DoctorName", "Community"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(doctorTable);
+        if (doctorTable.getColumnModel().getColumnCount() > 0) {
+            doctorTable.getColumnModel().getColumn(0).setResizable(false);
+            doctorTable.getColumnModel().getColumn(0).setPreferredWidth(30);
+            doctorTable.getColumnModel().getColumn(1).setResizable(false);
+            doctorTable.getColumnModel().getColumn(1).setPreferredWidth(60);
+            doctorTable.getColumnModel().getColumn(2).setResizable(false);
+            doctorTable.getColumnModel().getColumn(2).setPreferredWidth(30);
+        }
+
+        updatePatientButton1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        updatePatientButton1.setText("UPDATE ENTRY");
+        updatePatientButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updatePatientButton1ActionPerformed(evt);
+            }
+        });
+
+        deletePatientButton1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        deletePatientButton1.setText("DELETE ENTRY");
+        deletePatientButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletePatientButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout personPanelLayout = new javax.swing.GroupLayout(personPanel);
         personPanel.setLayout(personPanelLayout);
         personPanelLayout.setHorizontalGroup(
             personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(personPanelLayout.createSequentialGroup()
-                .addComponent(backButton)
-                .addGap(70, 70, 70)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
-                .addGap(147, 147, 147))
-            .addGroup(personPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(personPanelLayout.createSequentialGroup()
-                        .addComponent(createPersonButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(updatePersonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(deletePersonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(personPanelLayout.createSequentialGroup()
-                        .addComponent(viewEncounterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(updatePatientButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(deletePatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(2, 2, 2))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, personPanelLayout.createSequentialGroup()
                 .addGap(187, 187, 187)
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(132, 132, 132))
+            .addGroup(personPanelLayout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(265, Short.MAX_VALUE))
+            .addGroup(personPanelLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(personPanelLayout.createSequentialGroup()
+                        .addComponent(backButton)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(147, 147, 147))
+                    .addGroup(personPanelLayout.createSequentialGroup()
+                        .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(personPanelLayout.createSequentialGroup()
+                                .addComponent(jScrollPane3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(updatePatientButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(deletePatientButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(personPanelLayout.createSequentialGroup()
+                                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane1)
+                                    .addComponent(jScrollPane2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(deletePersonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(updatePersonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(createPersonButton))
+                                    .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(viewEncounterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(updatePatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(deletePatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(31, 31, 31))))
         );
+
+        personPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {createPersonButton, deletePatientButton1, deletePersonButton, updatePatientButton1, updatePersonButton, viewEncounterButton});
+
         personPanelLayout.setVerticalGroup(
             personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(personPanelLayout.createSequentialGroup()
                 .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(personPanelLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(backButton)
-                        .addGap(44, 44, 44))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, personPanelLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deletePersonButton)
-                    .addComponent(updatePersonButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(createPersonButton))
-                .addGap(47, 47, 47)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deletePatientButton)
-                    .addComponent(updatePatientButton)
-                    .addComponent(viewEncounterButton))
-                .addGap(236, 236, 236))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                        .addGap(12, 12, 12))
+                    .addGroup(personPanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(backButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(personPanelLayout.createSequentialGroup()
+                        .addComponent(createPersonButton)
+                        .addGap(14, 14, 14)
+                        .addComponent(updatePersonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(deletePersonButton))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(personPanelLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(viewEncounterButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(updatePatientButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(deletePatientButton))
+                    .addGroup(personPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(41, 41, 41)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                .addGroup(personPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(personPanelLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(updatePatientButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(deletePatientButton1))
+                    .addGroup(personPanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(28, 28, 28))
         );
+
+        personPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {createPersonButton, deletePatientButton, deletePatientButton1, deletePersonButton, updatePatientButton, updatePatientButton1, updatePersonButton, viewEncounterButton});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -305,6 +393,9 @@ public class PersonDirectory extends javax.swing.JPanel {
             loadPersonTable();
             loadPatientTable();
         }
+        else {
+            JOptionPane.showMessageDialog(null, "Select a record!");
+        }
 
     }//GEN-LAST:event_deletePersonButtonActionPerformed
 
@@ -327,7 +418,7 @@ public class PersonDirectory extends javax.swing.JPanel {
         // TODO add your handling code here:
         SystemAddPerson addPersonJPanel = new SystemAddPerson(lowerPanel, admin);
         lowerPanel.add("AddPersonJPanel",addPersonJPanel);
-        CardLayout layout = (CardLayout)lowerPanel.getLayout();
+        CardLayout layout = (CardLayout) lowerPanel.getLayout();
         layout.next(lowerPanel);
     }//GEN-LAST:event_createPersonButtonActionPerformed
 
@@ -347,7 +438,7 @@ public class PersonDirectory extends javax.swing.JPanel {
             return;
         }
         Person person = (Person)patientTable.getValueAt(row, 1);
-        SystemViewEncounter viewEncounterJPanel = new SystemViewEncounter(lowerPanel, admin);
+        SystemViewEncounter viewEncounterJPanel = new SystemViewEncounter(lowerPanel,person, admin);
         lowerPanel.add("EncounterPanel",viewEncounterJPanel);
         CardLayout layout = (CardLayout)lowerPanel.getLayout();
         layout.next(lowerPanel);
@@ -363,6 +454,9 @@ public class PersonDirectory extends javax.swing.JPanel {
             person.setIsPatient(false);
             loadPersonTable();
             loadPatientTable();
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Select a record!");
         }
     }//GEN-LAST:event_deletePatientButtonActionPerformed
 
@@ -381,25 +475,60 @@ public class PersonDirectory extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_updatePatientButtonActionPerformed
 
+    private void updatePatientButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePatientButton1ActionPerformed
+        // TODO add your handling code here:
+        int selectedRow;
+        selectedRow = doctorTable.getSelectedRow();
+        if (!(selectedRow < 0)) {
+            Doctor doctor = (Doctor) doctorTable.getValueAt(selectedRow, 1);
+            UpdateDoctor docPanel = new UpdateDoctor(lowerPanel, doctor, admin);
+            lowerPanel.add("EditDoctorPanel", docPanel);
+            CardLayout cardLayout = (CardLayout) lowerPanel.getLayout();
+            cardLayout.next(lowerPanel);
+        } else {
+            JOptionPane.showMessageDialog(null, "Select a record!");
+        }
+    }//GEN-LAST:event_updatePatientButton1ActionPerformed
+
+    private void deletePatientButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletePatientButton1ActionPerformed
+        // TODO add your handling code here:
+        int selectedRow;
+        selectedRow = doctorTable.getSelectedRow();
+        if (!(selectedRow < 0)) {
+            Doctor doctor = (Doctor) doctorTable.getValueAt(selectedRow, 1);
+            this.admin.deleteDoctor(doctor);
+            loadDoctorTable();
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Select a record!");
+        }
+    }//GEN-LAST:event_deletePatientButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
     private javax.swing.JButton createPersonButton;
     private javax.swing.JButton deletePatientButton;
+    private javax.swing.JButton deletePatientButton1;
     private javax.swing.JButton deletePersonButton;
+    private javax.swing.JTable doctorTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable patientTable;
     private javax.swing.JPanel personPanel;
     private javax.swing.JTable personTable;
     private javax.swing.JButton updatePatientButton;
+    private javax.swing.JButton updatePatientButton1;
     private javax.swing.JButton updatePersonButton;
     private javax.swing.JButton viewEncounterButton;
     // End of variables declaration//GEN-END:variables
     
     public void loadPersonTable() {
+        personTable.setRowHeight(30);
         int rowCount = personTable.getRowCount();
         DefaultTableModel model = (DefaultTableModel) personTable.getModel();
         for(int i=rowCount-1;i>=0;i--){
@@ -423,8 +552,27 @@ public class PersonDirectory extends javax.swing.JPanel {
         }
         
     }
+    
+    public void loadDoctorTable() {
+        doctorTable.setRowHeight(30);
+        int rowCount = doctorTable.getRowCount();
+        DefaultTableModel model = (DefaultTableModel) doctorTable.getModel();
+        for(int i=rowCount-1;i>=0;i--){
+            model.removeRow(i);
+        }
+        for (Doctor d : admin.getDoctorDirectory()) {
+            Object row[] = new Object[3];
+        
+            row[0] = d.getDocid();
+            row[1] = d;
+            row[2]= d.getCommunity();
+            
+            model.addRow(row);
+        }
+    }
 
-public void loadPatientTable() {
+    public void loadPatientTable() {
+        patientTable.setRowHeight(30);
         int rowCount = patientTable.getRowCount();
         ArrayList<Person> patientDirectory = new ArrayList<>();
 

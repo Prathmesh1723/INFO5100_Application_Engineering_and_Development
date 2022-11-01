@@ -6,6 +6,7 @@ package UI;
 
 import Model.Admin;
 import Model.Person;
+import Model.Doctor;
 import Model.Resident;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -32,30 +33,36 @@ public class LandingFrame extends javax.swing.JFrame {
 //        setBounds(0,0,screenSize.width, screenSize.height);
 //        setVisible(true);
         admin = new Admin();
-        Resident residence = new Resident("1225","Mission Main","Boston");
-        Person person1 = new Person("Kirti",25,"Female", "NA","NA", residence, false, 125.0, 12.0);
-        Person person2;
-        person2 = new Person("Ritika",21,"Female", "NA","NA", new Resident("0125", "Mission Main", "Brighton"), true, 180.00d, 66.00d, new ArrayList<>());
-        Person person3;
-        person3 = new Person("Sree",23,"Male", "Cold","knee surgery", new Resident("0112", "City View", "Roxbury"), false, 192.0, 50.00d, new ArrayList<>());
-        Person person4;
-        person4 = new Person("Cristene",27,"Female", "NA","diabetes", new Resident("1797", "Boylston", "Boston"), false, 160.00d, 70.00d, new ArrayList<>());
-        Person person5;
-        person5 = new Person("Neil",26,"Male", "Fever","diabetes", new Resident("1223", "Longwood", "Roxbury"), true, 170.00d, 62.00d, new ArrayList<>());
-        Person person6;
-        person6 = new Person("Anu",26,"Female", "Acne","allergy", new Resident("1112", "Longwood", "Roxbury"), true, 130.00d, 72.00d, new ArrayList<>());
+        Resident residence = new Resident("1226","Beacon Street","Boston");
+        Person p1 = new Person("Mahika",21,"Female", "NA","NA", residence, false, 130.0, 11.0);
+        Person p2 = new Person("Shivani",21,"Female", "Fever","High BP", new Resident("0155", "Massachusett Ave", "Newyork"), true, 170.00d, 67.00d, new ArrayList<>());
+        Person p3 = new Person("Swarli",23,"Female", "Head ache","Elbow surgery", new Resident("0224", "Manhattan Ave", "Newyork"), false, 192.0, 80.00d, new ArrayList<>());
+        Person p4 = new Person("Neeraj",37,"Male", "diarrhea","Swine Flu", new Resident("1885", "Charles st", "Boston"), false, 130.00d, 60.00d, new ArrayList<>());
+        Person p5 = new Person("Atharva",22,"Male", "NA","Allergy", new Resident("0215", "Boylston", "Boston"), true, 150.00d, 40.00d, new ArrayList<>());
+        Person p6 = new Person("Chinmay",22,"Female", "Fever","Swine Flu", new Resident("1215", "Roxbury", "Texas"), true, 150.00d, 80.00d, new ArrayList<>());
 
         ArrayList<Person> personDirectory = new ArrayList<>();
-        personDirectory.add(person1);
-        personDirectory.add(person2);
-        personDirectory.add(person3);
-        personDirectory.add(person4);
-        personDirectory.add(person5);
-        personDirectory.add(person6);
+        personDirectory.add(p1);
+        personDirectory.add(p2);
+        personDirectory.add(p3);
+        personDirectory.add(p4);
+        personDirectory.add(p5);
+        personDirectory.add(p6);
         admin.setPersonDirectory(personDirectory);
         ArrayList<Person> patientDirectory = new ArrayList<>();
         admin.setPatientDirectory(patientDirectory);
-//        setSize(830,600);
+        
+        Doctor d1 = new Doctor("Victor", "Boston", 111);
+        Doctor d2 = new Doctor("Josh", "Neywork", 114);
+        Doctor d3 = new Doctor("Rahul", "Boston", 115);
+        Doctor d4 = new Doctor("Pamela", "Texas", 117);
+        
+        ArrayList<Doctor> doctorDirectory = new ArrayList<>();
+        doctorDirectory.add(d1);
+        doctorDirectory.add(d2);
+        doctorDirectory.add(d3);
+        doctorDirectory.add(d4);
+        admin.setDoctorDirectory(doctorDirectory);
 
     }
 
@@ -110,7 +117,7 @@ public class LandingFrame extends javax.swing.JFrame {
         lowerPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lowerPanel.setLayout(new java.awt.CardLayout());
 
-        MainPanelScreen.setBackground(new java.awt.Color(153, 255, 204));
+        MainPanelScreen.setBackground(new java.awt.Color(204, 255, 255));
 
         SystemAdmin.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         SystemAdmin.setText("SYSTEM ADMIN");
@@ -147,8 +154,8 @@ public class LandingFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel3.setText("Please select a user login type - ");
 
-        NewUser.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        NewUser.setText("New User");
+        NewUser.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        NewUser.setText("NEW USER");
         NewUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NewUserActionPerformed(evt);
@@ -193,7 +200,7 @@ public class LandingFrame extends javax.swing.JFrame {
                 .addGroup(MainPanelScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Patient, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(NewUser))
-                .addContainerGap(422, Short.MAX_VALUE))
+                .addContainerGap(424, Short.MAX_VALUE))
         );
 
         MainPanelScreenLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {CommunityAdmin, Doctor, NewUser, Patient, SystemAdmin});
