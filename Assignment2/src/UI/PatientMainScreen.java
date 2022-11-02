@@ -49,12 +49,13 @@ public class PatientMainScreen extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         patientTable = new javax.swing.JTable();
         viewEncounterButton = new javax.swing.JButton();
+        updatePatientButton = new javax.swing.JButton();
+        deletePatientButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         BackMain = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setText("PATIENT DIRECTORY");
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel2.setText("GLOBAL HEALTH HOSPITAL PATIENT DIRECTORY P");
 
         patientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -85,10 +86,34 @@ public class PatientMainScreen extends javax.swing.JPanel {
         jScrollPane2.setViewportView(patientTable);
 
         viewEncounterButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        viewEncounterButton.setText("VIEW APPOINTMENTS");
+        viewEncounterButton.setText("VIEW ENCOUNTERS");
         viewEncounterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewEncounterButtonActionPerformed(evt);
+            }
+        });
+
+        updatePatientButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        updatePatientButton.setText("UPDATE ENTRY");
+        updatePatientButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updatePatientButtonActionPerformed(evt);
+            }
+        });
+
+        deletePatientButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        deletePatientButton.setText("DELETE ENTRY");
+        deletePatientButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletePatientButtonActionPerformed(evt);
+            }
+        });
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setText("CREATE");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -107,37 +132,49 @@ public class PatientMainScreen extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(viewEncounterButton)
-                        .addGap(67, 67, 67)
-                        .addComponent(BackMain, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(117, 117, 117)
+                        .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 803, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 739, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(updatePatientButton)
+                                .addGap(45, 45, 45)
+                                .addComponent(viewEncounterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(59, 59, 59)
+                                .addComponent(deletePatientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(jLabel2)))
-                .addContainerGap(382, Short.MAX_VALUE))
+                        .addGap(285, 285, 285)
+                        .addComponent(BackMain, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(43, 43, 43)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(viewEncounterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BackMain, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(497, Short.MAX_VALUE))
+                    .addComponent(updatePatientButton)
+                    .addComponent(jButton1)
+                    .addComponent(viewEncounterButton)
+                    .addComponent(deletePatientButton))
+                .addGap(40, 40, 40)
+                .addComponent(BackMain)
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
+            .addGap(0, 806, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -146,7 +183,7 @@ public class PatientMainScreen extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -169,6 +206,41 @@ public class PatientMainScreen extends javax.swing.JPanel {
         layout.next(lowerPanel);
     }//GEN-LAST:event_viewEncounterButtonActionPerformed
 
+    private void updatePatientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePatientButtonActionPerformed
+        // TODO add your handling code here:
+        int selectedRow;
+        selectedRow = patientTable.getSelectedRow();
+        if (!(selectedRow < 0)) {
+            Person person = (Person) patientTable.getValueAt(selectedRow, 1);
+            PatientUpdate PatientUpdate = new PatientUpdate(lowerPanel, admin);
+            lowerPanel.add("EditPersonPanel", PatientUpdate);
+            CardLayout cardLayout = (CardLayout) lowerPanel.getLayout();
+            cardLayout.next(lowerPanel);
+        } else {
+            JOptionPane.showMessageDialog(null, "Select a record!");
+        }
+    }//GEN-LAST:event_updatePatientButtonActionPerformed
+
+    private void deletePatientButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletePatientButtonActionPerformed
+        // TODO add your handling code here:
+        int selectedRow;
+        selectedRow = patientTable.getSelectedRow();
+        if (!(selectedRow < 0)) {
+            Person person = (Person) patientTable.getValueAt(selectedRow, 1);
+            this.admin.deletePatient(person);
+            person.setIsPatient(false);
+            //loadpersonTable();
+            loadpatientTable();
+        }
+    }//GEN-LAST:event_deletePatientButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        PatientAdd PatientAdd = new PatientAdd(lowerPanel, admin);
+        lowerPanel.add("Createpatientdata",PatientAdd);
+        CardLayout layout = (CardLayout)lowerPanel.getLayout();
+        layout.next(lowerPanel);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void BackMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackMainActionPerformed
           // TODO add your handling code here:
           this.patientDir=admin.getPatientDirectory();
@@ -181,10 +253,13 @@ public class PatientMainScreen extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackMain;
+    private javax.swing.JButton deletePatientButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable patientTable;
+    private javax.swing.JButton updatePatientButton;
     private javax.swing.JButton viewEncounterButton;
     // End of variables declaration//GEN-END:variables
 

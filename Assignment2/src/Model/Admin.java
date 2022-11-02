@@ -13,19 +13,6 @@ import java.util.ArrayList;
 public class Admin {
     private ArrayList<Person> personDirectory;
     private ArrayList<Person> patientDirectory;
-    private ArrayList<Doctor> doctorDirectory;
-
-    public ArrayList<Doctor> getDoctorDirectory() {
-        return doctorDirectory;
-    }
-    
-    public void deleteDoctor(Doctor d){
-        this.doctorDirectory.remove(d);
-    }
-
-    public void setDoctorDirectory(ArrayList<Doctor> doctorDirectory) {
-        this.doctorDirectory = doctorDirectory;
-    }
 
 //defining directories
     public ArrayList<Person> getPersonDirectory() {
